@@ -1179,3 +1179,31 @@
 @media(max-width:767px){.gymkhana-page .g-bonuses {padding-top:65px;padding-bottom:65px}.gymkhana-page .g-track-info {padding:30px 10%}.gymkhana-page .g-participate .slanted {width:100%}.gymkhana-page .g-participate .slanted-center {flex:1;min-width:0}.gymkhana-page .g-participate > div {padding-top:8px}}
 
 .gymkhana-page .g-photo-break + .g-bonuses {margin-top:32px}
+
+/* PRO team classification: an editorial rules block before the festival. */
+.gymkhana-page .g-team {display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,5vw,90px);padding-block:70px;background:#141414}
+.g-team-heading .g-kicker {display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12px;letter-spacing:.04em}
+.g-pro-badge {display:inline-block;padding:8px 16px;background:#ed001b;color:#fff;clip-path:polygon(12% 0,100% 0,88% 100%,0 100%);font-weight:700;letter-spacing:0}
+.gymkhana-page .g-team h2 {font-size:clamp(36px,4.3vw,70px);line-height:1.04;margin-top:24px;letter-spacing:0}
+.g-team h2 span {color:#ed001b}
+.g-team-rules {min-width:0}
+.g-team-rule {display:grid;grid-template-columns:100px 1fr;gap:20px;padding:26px 0;border-top:1px solid #414141}
+.g-team-number {font-family:Druk,sans-serif;font-weight:900;font-size:48px;line-height:1;color:#ed001b}
+.gymkhana-page .g-team h3 {font-size:clamp(16px,1.4vw,22px);line-height:1.35;margin:0 0 12px;letter-spacing:0}
+.gymkhana-page .g-team p:not(.g-kicker) {font-size:14px;line-height:1.7;margin:0;color:#c7c7c7}
+.g-team-award {display:flex;gap:20px;align-items:center;padding:24px;border-left:3px solid #ed001b;background:linear-gradient(110deg,#ed001b22,transparent)}
+.g-team-award svg {width:34px;height:34px;flex-shrink:0;color:#ed001b}
+.g-team-award strong {color:#fff}
+@media(max-width:767px){
+ .gymkhana-page .g-team {grid-template-columns:1fr;gap:28px;padding-block:48px}
+ .gymkhana-page .g-team h2 {font-size:34px}
+ .g-team-rule {grid-template-columns:64px 1fr;gap:14px;padding:24px 0}
+ .g-team-number {font-size:32px}
+ .gymkhana-page .g-team p:not(.g-kicker) {font-size:12px;line-height:1.7}
+ .g-team-award {padding:20px 16px;gap:14px}
+}
+.g-team-number {white-space:nowrap}
+.g-team-rule {grid-template-columns:130px 1fr}
+@media(max-width:767px){.g-team-rule {grid-template-columns:78px 1fr}.g-team-number {font-size:28px}}
+@media(min-width:768px){.gymkhana-page .g-team h2 {font-size:clamp(32px,3.2vw,48px)}}
+@media(min-width:768px) and (max-width:1023px){.gymkhana-page .g-team {grid-template-columns:1fr}}

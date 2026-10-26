@@ -5,6 +5,7 @@ import {
   ArrowUpRight,
   Flag,
   Timer,
+  Trophy,
   Route,
   Users,
   CalendarDays,
@@ -302,7 +303,7 @@ export function GymkhanaPage({
       <section className="g-photo-break" aria-label="Джимхана в Санкт-Петербурге"><img src="/assets/sections/gym-2026-008.webp" alt="Автомобиль на трассе джимханы" loading="lazy" /></section>
       <section className="g-section g-bonuses">
         <div>
-          <p className="g-kicker">Бонусы / Правила этапа</p>
+          <p className="g-kicker">Бонусы / Только серия PRO</p>
           <h2>
             КАЖДЫЙ МАНЁВР
             <br />
@@ -312,9 +313,26 @@ export function GymkhanaPage({
         <div>
           <h3>За что начисляют бонусы?</h3>
           <p>
-            Выполняй задания точно. Перечень бонусных элементов и их влияние на
+            Выполняй задания точно. В серии PRO перечень бонусных элементов и их влияние на
             итоговое время публикуются в регламенте этапа.
           </p>
+        </div>
+      </section>
+      <section className="g-section g-team" aria-labelledby="team-title">
+        <div className="g-team-heading">
+          <p className="g-kicker"><span className="g-pro-badge">PRO</span> Только для серии PRO</p>
+          <h2 id="team-title">КОМАНДНЫЙ<br /><span>ЗАЧЁТ</span></h2>
+        </div>
+        <div className="g-team-rules">
+          <article className="g-team-rule">
+            <span className="g-team-number" aria-hidden="true">2–3</span>
+            <div><h3>Сколько человек в команде?</h3><p>В команде может быть от 2 до 3 пилотов.</p></div>
+          </article>
+          <article className="g-team-rule">
+            <span className="g-team-number" aria-hidden="true">2</span>
+            <div><h3>Что такое командные очки?</h3><p>Очки, которые пилоты набирают в личном зачёте, одновременно работают и на команду. Два лучших результата пилотов одной команды суммируются и идут в командный зачёт.</p></div>
+          </article>
+          <div className="g-team-award"><Trophy aria-hidden="true" /><p>По итогам сезона лучшие команды получат <strong>отдельный кубок</strong> в рамках командного зачёта PRO.</p></div>
         </div>
       </section>
       <section className="g-section g-festival">
