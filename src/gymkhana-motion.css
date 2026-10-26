@@ -1,0 +1,1181 @@
+/* Page-specific composition; shared navigation and home remain unchanged. */
+.gymkhana-page {
+  --g-space: clamp(20px, 5vw, 80px);
+}
+.gymkhana-page .g-section {
+  padding: 90px var(--g-space);
+}
+.gymkhana-page h2 {
+  font-size: clamp(34px, 5.2vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+}
+.gymkhana-page h2 span {
+  color: #ed001b;
+}
+.gymkhana-page .g-hero {
+  height: min(960px, 100svh);
+  min-height: 720px;
+  padding: 180px var(--g-space) 130px;
+  display: flex;
+  align-items: flex-end;
+}
+.g-hero-slider {
+  position: absolute;
+  inset: 0;
+  touch-action: pan-y;
+}
+.g-hero-slider > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.65s;
+  filter: brightness(0.6);
+}
+.g-hero-slider > img.is-active {
+  opacity: 1;
+}
+.gymkhana-page .g-hero-copy {
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+.gymkhana-page .g-hero h1 {
+  font-size: clamp(64px, 8.7vw, 132px);
+  line-height: 0.9;
+  margin: 24px 0;
+}
+.gymkhana-page .g-hero-lead {
+  font-size: 18px;
+}
+.gymkhana-page .g-hero-lines {
+  pointer-events: none;
+}
+.g-hex {
+  display: inline-block;
+  color: #ed001b;
+  font-size: 46px;
+  vertical-align: middle;
+  line-height: 1;
+  margin-right: 12px;
+}
+.g-slide-controls {
+  position: absolute;
+  right: var(--g-space);
+  bottom: 180px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+.g-slide-controls button,
+.g-ring-controls button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ffffff60;
+  background: #151515c9;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.g-slide-controls button:hover,
+.g-ring-controls button:hover {
+  background: #ed001b;
+}
+.gymkhana-page .g-hero-bottom {
+  z-index: 3;
+}
+.gymkhana-page .g-photo-section {
+  padding-top: 50px;
+}
+.g-gallery-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.gymkhana-page .g-gallery-heading h2 {
+  font-size: clamp(30px, 3vw, 44px);
+  margin: 0;
+}
+.g-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.g-photo-grid button {
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: #222;
+  aspect-ratio: 1.15;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff;
+  text-align: left;
+}
+.g-photo-grid button:last-child {
+  grid-column: span 2;
+  aspect-ratio: 2.34;
+}
+.g-photo-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.6s,
+    filter 0.6s;
+}
+.g-photo-grid button:hover img {
+  transform: scale(1.045);
+  filter: brightness(0.8);
+}
+.g-photo-grid button > span {
+  position: absolute;
+  inset: auto 18px 18px;
+  display: flex;
+  justify-content: space-between;
+  text-shadow: 0 2px 6px #000;
+}
+.gymkhana-page .g-logo-section {
+  background: #080808;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 50px;
+}
+.g-logo-stage {
+  --ring-radius: 280px;
+  height: 300px;
+  perspective: 950px;
+  position: relative;
+  touch-action: pan-y;
+  cursor: grab;
+}
+.g-logo-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.g-logo-face {
+  position: absolute;
+  width: 220px;
+  height: 100px;
+  left: -110px;
+  top: -50px;
+  display: grid;
+  place-items: center;
+  backface-visibility: hidden;
+  opacity: 0.3;
+  transition: opacity 0.6s;
+}
+.g-logo-face.is-active {
+  opacity: 1;
+}
+.g-logo-face img {
+  max-width: 82%;
+  max-height: 65px;
+  filter: brightness(0) invert(1);
+  pointer-events: none;
+}
+.g-ring-controls {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0 28px;
+}
+.g-ring-controls > span {
+  width: 160px;
+}
+.g-ring-controls small {
+  display: block;
+  margin-top: 8px;
+  color: #aaa;
+}
+.gymkhana-page .g-intro {
+  grid-template-columns: 1.2fr 1fr;
+  gap: 7vw;
+}
+.gymkhana-page .g-intro h2 {
+  font-size: clamp(45px, 6.7vw, 98px);
+}
+.gymkhana-page .g-intro h2 span {
+  display: inline-block;
+  margin-left: 10%;
+}
+.gymkhana-page .g-track-info {
+  align-self: center;
+  min-width: 0;
+}
+.gymkhana-page .g-track-info h3 {
+  margin-top: 30px;
+}
+.gymkhana-page .g-track {
+  margin: 0;
+  background: #202020;
+  clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
+  padding: 35px;
+}
+.gymkhana-page .g-score-grid > div {
+  border: 0;
+  border-top: 2px solid #ed001b;
+  background: #212121;
+  min-height: 240px;
+  transition: background 0.25s;
+}
+.gymkhana-page .g-score-grid > div:hover {
+  background: #303030;
+}
+.gymkhana-page .g-bonuses,
+.gymkhana-page .g-prize-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7vw;
+  align-items: center;
+}
+.gymkhana-page .g-bonuses {
+  background: #161616;
+}
+.gymkhana-page .g-bonuses p {
+  line-height: 1.7;
+}
+.gymkhana-page .g-festival-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 14px;
+}
+.g-bento-photo {
+  grid-row: span 2;
+  position: relative;
+  min-height: 530px;
+  overflow: hidden;
+}
+.g-bento-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  filter: brightness(0.65);
+}
+.g-bento-photo > span {
+  position: absolute;
+  bottom: 30px;
+  left: 24px;
+  right: 24px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.gymkhana-page .g-festival-card {
+  clip-path: none;
+  border-radius: 0;
+  min-height: 258px;
+  padding: 28px;
+  background: #222;
+  transition:
+    transform 0.25s,
+    background 0.25s;
+}
+.gymkhana-page .g-festival-card:nth-child(3) {
+  background: #e7001a;
+  color: white;
+}
+.gymkhana-page .g-festival-card:nth-child(4) {
+  background: #eee;
+  color: #111;
+}
+.gymkhana-page .g-festival-card p {
+  color: inherit;
+  opacity: 0.8;
+}
+.gymkhana-page .g-festival-card:hover {
+  transform: translateY(-4px);
+  background: #393939;
+  color: white;
+}
+.gymkhana-page .g-video-frame {
+  transform-origin: center;
+  clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
+}
+.gymkhana-page .g-participate {
+  display: block;
+  max-width: none;
+}
+.gymkhana-page .g-prize {
+  min-height: 320px;
+  margin: 0;
+}
+.g-pilot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 35px;
+}
+.g-pilot-grid a {
+  min-height: 200px;
+  padding: 28px;
+  background: #202020;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  transition: background 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.g-pilot-grid a:hover {
+  background: #a90017;
+}
+.g-pilot-grid a > span {
+  font-size: 12px;
+  color: #aaa;
+}
+.g-pilot-grid h3 {
+  font-size: 23px;
+  margin: 30px 0 10px;
+  max-width: 240px;
+}
+.g-pilot-grid svg {
+  position: absolute;
+  right: 18px;
+  top: 24px;
+}
+.gymkhana-page button:focus-visible,
+.gymkhana-page [tabindex]:focus-visible,
+.g-pilot-grid a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+@media (max-width: 767px) {
+  .gymkhana-page .g-section {
+    padding: 54px 20px;
+  }
+  .gymkhana-page .g-hero {
+    height: calc(100svh - 64px);
+    min-height: 670px;
+    padding: 140px 20px 225px;
+  }
+  .gymkhana-page .g-hero h1 {
+    font-size: clamp(44px, 10vw, 76px);
+  }
+  .gymkhana-page .g-hero-lead {
+    font-size: 15px;
+  }
+  .g-hex {
+    font-size: 30px;
+    margin-right: 5px;
+  }
+  .g-slide-controls {
+    right: 20px;
+    bottom: 172px;
+    gap: 14px;
+  }
+  .g-slide-controls button {
+    width: 38px;
+    height: 38px;
+  }
+  .gymkhana-page .g-hero-bottom {
+    bottom: 20px;
+    gap: 20px;
+  }
+  .g-gallery-heading {
+    display: block;
+  }
+  .g-gallery-heading h2 {
+    margin-top: 15px !important;
+  }
+  .g-photo-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .g-photo-grid button:last-child {
+    grid-column: auto;
+    aspect-ratio: 1.15;
+  }
+  .g-logo-stage {
+    --ring-radius: 175px;
+    height: 235px;
+    perspective: 800px;
+  }
+  .g-logo-face {
+    width: 155px;
+    left: -77.5px;
+  }
+  .g-logo-face img {
+    max-height: 44px;
+  }
+  .gymkhana-page .g-intro,
+  .gymkhana-page .g-bonuses,
+  .gymkhana-page .g-prize-section {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .gymkhana-page .g-intro h2 {
+    font-size: clamp(43px, 11vw, 70px);
+  }
+  .gymkhana-page .g-intro h2 span {
+    margin-left: 0;
+  }
+  .gymkhana-page .g-festival-grid {
+    grid-template-columns: 1fr;
+  }
+  .g-bento-photo {
+    grid-row: auto;
+    min-height: 380px;
+  }
+  .gymkhana-page .g-festival-card {
+    min-height: 210px;
+  }
+  .g-pilot-grid {
+    grid-template-columns: 1fr;
+  }
+  .g-pilot-grid a {
+    min-height: 160px;
+  }
+  .gymkhana-page .g-track {
+    padding: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .g-hero-slider > img,
+  .g-logo-ring,
+  .g-logo-face,
+  .g-photo-grid img,
+  .gymkhana-page .g-festival-card {
+    transition: none;
+  }
+  .g-logo-stage {
+    perspective: none;
+  }
+  .g-logo-ring {
+    transform: none !important;
+  }
+  .g-logo-face {
+    transform: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .g-logo-face.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .g-photo-grid button:hover img,
+  .gymkhana-page .g-festival-card:hover {
+    transform: none;
+  }
+}
+.gymkhana-page .g-hero {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.gymkhana-page .g-title-mask {
+  display: block;
+  overflow: hidden;
+  color: inherit;
+  padding-bottom: 0.06em;
+  margin-bottom: -0.06em;
+}
+.g-title-mask > span {
+  display: block;
+}
+.gymkhana-page .g-intro h2 {
+  font-size: clamp(43px, 5.1vw, 76px);
+}
+.g-digit-mask {
+  display: block;
+  height: 1.2em;
+  overflow: hidden;
+  line-height: 1.2;
+}
+.g-digit-mask > span {
+  display: block;
+  transform: translateY(-50%);
+}
+.gymkhana-page .g-hero-slider:focus-visible {
+  outline-offset: -6px;
+}
+.gymkhana-page .g-hero-copy {
+  max-width: 100%;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .gymkhana-page .g-hero h1 {
+    font-size: clamp(29px, 8.1vw, 60px);
+  }
+  .gymkhana-page .g-hero .g-kicker {
+    font-size: 10px;
+    white-space: normal;
+  }
+  .gymkhana-page .g-hero .g-hex {
+    font-size: 26px;
+  }
+  .g-slide-controls {
+    bottom: 205px;
+  }
+  .gymkhana-page .g-hero {
+    padding-bottom: 265px;
+  }
+}
+.g-hex svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+.gymkhana-page .g-festival-card:nth-child(3) > svg {
+  color: white;
+}
+.gymkhana-page .g-festival-card > span {
+  opacity: 0.65;
+}
+/* October refinement: photographic hero and quiet, outline calls to action. */
+.g-hero-autoplay {
+  overflow: hidden;
+}
+.g-hero-autoplay > img {
+  opacity: 0;
+  transform: scale(1.09);
+  transition:
+    opacity 1.4s ease,
+    transform 8s linear;
+  filter: brightness(0.64);
+  object-position: center 60%;
+}
+.g-hero-autoplay > img.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+.gymkhana-page .g-hero .slanted {
+  position: relative;
+  background: transparent !important;
+  color: #fff;
+  isolation: isolate;
+}
+.gymkhana-page .g-hero .slanted::before {
+  content: "";
+  position: absolute;
+  inset: 0 12px;
+  border: 1px solid #ffffffa0;
+  transform: skewX(-24deg);
+  z-index: -1;
+  background: #1112;
+  transition: background 0.25s;
+}
+.gymkhana-page .g-hero .slanted:hover::before {
+  background: #ffffff20;
+}
+.gymkhana-page .g-hero .slanted .edge {
+  visibility: hidden;
+}
+.gymkhana-page .g-hero .slanted-center {
+  background: transparent !important;
+  color: white;
+}
+.gymkhana-page .g-intro h2,
+.gymkhana-page .g-intro h2 span {
+  text-align: left;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .g-photo-grid {
+    display: flex;
+    gap: 12px;
+    height: 450px;
+  }
+  .g-photo-grid > button,
+  .g-photo-grid > button:last-child {
+    flex: 1 1 0;
+    aspect-ratio: auto;
+    min-width: 0;
+    transition: flex 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .g-photo-grid:has(button:hover) > button,
+  .g-photo-grid:has(button:focus-visible) > button {
+    flex: 0.65 1 0;
+  }
+  .g-photo-grid > button:hover,
+  .g-photo-grid > button:focus-visible {
+    flex: 3 1 0 !important;
+  }
+  .g-photo-grid button > span {
+    font-size: 11px;
+    gap: 4px;
+    white-space: nowrap;
+  }
+}
+.g-logo-orbit {
+  --ring-radius: 620px;
+  height: 390px;
+  perspective: 1350px;
+  user-select: none;
+}
+.g-logo-orbit .g-logo-ring {
+  transition: none;
+}
+.g-logo-orbit .g-logo-face {
+  opacity: 1;
+  width: 150px;
+  left: -75px;
+  height: 80px;
+  top: -40px;
+  backface-visibility: visible;
+}
+.g-logo-orbit .g-logo-face img {
+  object-fit: contain;
+  max-width: 140px;
+  max-height: 58px;
+}
+.g-logo-orbit .partner-logo {
+  filter: brightness(0) invert(1);
+}
+.g-logo-orbit:active {
+  cursor: grabbing;
+}
+.gymkhana-page .g-score-grid {
+  gap: 0;
+  border-bottom: 1px solid #ffffff25;
+}
+.gymkhana-page .g-score-grid > div {
+  background: transparent;
+  border-top: 1px solid #ffffff25;
+  border-right: 1px solid #ffffff25;
+  min-height: 210px;
+  padding: 28px;
+}
+.gymkhana-page .g-score-grid > div:last-child {
+  border-right: 0;
+}
+.gymkhana-page .g-score-grid > div > svg {
+  display: none;
+}
+.gymkhana-page .g-score-grid .g-score-num {
+  position: static;
+  display: block;
+  color: #e40f1b;
+  opacity: 1;
+  font-size: 48px;
+  margin-bottom: 36px;
+}
+.gymkhana-page .g-bonuses {
+  position: relative;
+  border-left: 4px solid #e40f1b;
+  margin: 0 var(--g-space);
+  padding: 52px;
+  background: linear-gradient(120deg, #291117, #161616 65%);
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+}
+.gymkhana-page .g-bonuses h2 {
+  font-size: clamp(30px, 3.8vw, 54px);
+}
+.gymkhana-page .g-video-frame {
+  clip-path: none;
+  overflow: hidden;
+}
+.g-video-fallback {
+  display: block;
+  width: fit-content;
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 18px;
+}
+.g-series-toggle {
+  display: flex;
+  gap: 28px;
+  margin: 35px 0 24px;
+  border-bottom: 1px solid #ffffff30;
+  width: fit-content;
+}
+.g-series-toggle button {
+  background: none;
+  border: 0;
+  color: #888;
+  padding: 16px 0;
+  font: inherit;
+  cursor: pointer;
+  position: relative;
+}
+.g-series-toggle button::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px;
+  height: 2px;
+  background: #e40f1b;
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+.g-series-toggle button[aria-pressed="true"] {
+  color: #fff;
+}
+.g-series-toggle button[aria-pressed="true"]::after {
+  transform: scaleX(1);
+}
+.g-series-copy {
+  min-height: 3.5em;
+  max-width: 750px;
+}
+.gymkhana-page .g-prize-section {
+  grid-template-columns: 1fr 1.3fr;
+  background: #090909;
+  gap: 30px 60px;
+}
+.g-prize-podium {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 330px;
+}
+.g-prize-podium > div {
+  flex: 1;
+  padding: 25px 12px;
+  text-align: center;
+  border: 1px solid #ffffff30;
+  height: 65%;
+  background: linear-gradient(#252525, #0e0e0e);
+}
+.g-prize-podium > div:nth-child(2) {
+  height: 100%;
+  background: #e4001c;
+  border: 0;
+}
+.g-prize-podium > div:last-child {
+  height: 52%;
+}
+.g-prize-podium span {
+  font-family: Druk, sans-serif;
+  font-size: 75px;
+  line-height: 1;
+}
+.g-prize-podium p {
+  font-size: 10px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+.g-prize-podium svg {
+  margin-top: 20px;
+}
+.g-prize-caption {
+  grid-column: 1/-1;
+  text-align: right;
+  color: #aaa;
+  font-size: 12px;
+}
+.g-pilot-profile {
+  position: relative;
+  margin-top: 70px;
+  min-height: 300px;
+  padding: 70px 29% 34px 9%;
+  isolation: isolate;
+}
+.g-pilot-red {
+  position: absolute;
+  inset: 40px 0 0;
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  background: #df000a;
+  z-index: -1;
+  overflow: hidden;
+}
+.g-pilot-pattern {
+  position: absolute;
+  left: 0;
+  top: -100px;
+  opacity: 0.16;
+  transform: scale(2.3);
+  transform-origin: left top;
+  pointer-events: none;
+}
+.g-pilot-portrait {
+  position: absolute;
+  height: 340px;
+  width: auto;
+  right: 4%;
+  bottom: 0;
+  object-fit: contain;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 78% 100%, 0 100%);
+}
+.g-pilot-top {
+  display: grid;
+  grid-template-columns: 70px 1.1fr 1fr 1fr;
+  gap: 22px;
+  align-items: center;
+}
+.g-pilot-top h3,
+.g-pilot-top p {
+  font-family: Bounded, sans-serif;
+  font-size: clamp(14px, 1.6vw, 24px);
+  line-height: 1.3;
+  margin: 0;
+}
+.g-pilot-number {
+  position: relative;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  font-weight: bold;
+  color: #e40f1b;
+  height: 78px;
+  width: 70px;
+}
+.g-pilot-number img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.g-pilot-team {
+  margin: 55px 0 0;
+  font-size: clamp(14px, 1.5vw, 22px);
+  color: #ffffffb8;
+}
+.g-pilot-team strong {
+  color: white;
+}
+@media (max-width: 767px) {
+  .g-logo-orbit {
+    --ring-radius: 360px;
+    height: 290px;
+    perspective: 850px;
+  }
+  .g-logo-orbit .g-logo-face {
+    width: 95px;
+    left: -47.5px;
+  }
+  .g-logo-orbit .g-logo-face img {
+    max-width: 85px;
+    max-height: 36px;
+  }
+  .gymkhana-page .g-bonuses {
+    margin: 0 20px;
+    padding: 28px 22px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .gymkhana-page .g-prize-section {
+    grid-template-columns: 1fr;
+  }
+  .g-prize-podium {
+    height: 260px;
+  }
+  .g-prize-podium span {
+    font-size: 54px;
+  }
+  .g-prize-caption {
+    text-align: left;
+  }
+  .g-series-toggle {
+    gap: 20px;
+  }
+  .g-series-toggle button {
+    font-size: 13px;
+  }
+  .g-pilot-profile {
+    padding: 62px 24px 250px;
+    margin-top: 35px;
+    min-height: 500px;
+  }
+  .g-pilot-red {
+    inset: 25px 0 0;
+    clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%);
+  }
+  .g-pilot-top {
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+  }
+  .g-pilot-top p {
+    font-size: 13px;
+  }
+  .g-pilot-number {
+    width: 48px;
+    height: 55px;
+    font-size: 26px;
+  }
+  .g-pilot-top h3 {
+    font-size: 22px;
+  }
+  .g-pilot-team {
+    position: relative;
+    z-index: 2;
+    margin-top: 22px;
+    font-size: 13px;
+    max-width: 180px;
+  }
+  .g-pilot-portrait {
+    height: 250px;
+    right: 4%;
+  }
+  .g-pilot-pattern {
+    transform: scale(1.4);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .g-hero-autoplay > img {
+    transition: none;
+    transform: none;
+  }
+  .g-logo-orbit {
+    height: auto;
+    perspective: none;
+  }
+  .g-logo-orbit .g-logo-ring {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: auto;
+    height: auto;
+    transform: none !important;
+    padding: 35px 0;
+  }
+  .g-logo-orbit .g-logo-face {
+    position: static;
+    transform: none !important;
+    opacity: 1;
+    visibility: visible;
+    width: 120px;
+    height: 70px;
+  }
+  .g-photo-grid > button {
+    transition: none !important;
+  }
+}
+.g-logo-orbit .g-logo-face {
+  backface-visibility: hidden;
+}
+.g-logo-orbit .compound-logo {
+  filter: brightness(0) invert(1);
+}
+@media (min-width: 768px) {
+  .g-photo-grid:has(button:hover) > button:focus-visible:not(:hover) {
+    flex: 0.65 1 0 !important;
+  }
+}
+.gymkhana-page .g-pilot-top p {
+  font-size: clamp(14px, 1.6vw, 24px);
+  line-height: 1.3;
+  color: #fff;
+}
+.gymkhana-page .g-pilot-team {
+  margin-top: 55px;
+  font-size: clamp(14px, 1.5vw, 22px);
+  color: #ffffffb8;
+}
+.gymkhana-page .g-pilot-pattern {
+  max-width: none;
+  width: auto;
+  height: auto;
+  filter: invert(1);
+  opacity: 0.16;
+}
+@media (max-width: 767px) {
+  .gymkhana-page .g-pilot-top p {
+    font-size: 13px;
+  }
+  .gymkhana-page .g-pilot-team {
+    margin-top: 22px;
+    font-size: 13px;
+  }
+}
+.g-prize-podium > div {
+  min-width: 0;
+}
+@media (max-width: 767px) {
+  .g-pilot-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 12px;
+  }
+  .g-pilot-top h3 {
+    font-size: 19px;
+  }
+  .g-prize-podium {
+    gap: 6px;
+  }
+  .g-prize-podium > div {
+    padding: 20px 6px;
+  }
+  .g-prize-podium span {
+    font-size: 40px;
+  }
+  .gymkhana-page .g-prize-podium p {
+    font-size: 8px;
+    line-height: 1.4;
+  }
+}
+.g-hero-autoplay > img {transform:scale(1);transition:opacity 1.4s ease}
+.g-hero-autoplay > img.is-active {animation:g-photo-retreat 8s linear both}
+@keyframes g-photo-retreat {from {transform:scale(1.09)} to {transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.g-hero-autoplay > img.is-active {animation:none}}
+.gymkhana-page .g-pilot-profile .g-pilot-top p {font-size:clamp(14px,1.6vw,24px);line-height:1.3;color:white}
+.gymkhana-page .g-pilot-profile .g-pilot-team {font-size:clamp(14px,1.5vw,22px);color:#ffffffb8;margin-top:55px}
+.gymkhana-page .g-prize-podium > div p {font-size:10px;color:white;line-height:1.4}
+@media(max-width:767px){.gymkhana-page .g-pilot-profile .g-pilot-top p {font-size:13px}.gymkhana-page .g-pilot-profile .g-pilot-team {font-size:13px;margin-top:22px}.gymkhana-page .g-prize-podium > div p {font-size:8px}}
+/* Review pass: coordinated hero, compact mobile layout and horizontal cards. */
+.desktop-header.header-loading {opacity:0;pointer-events:none}
+.gymkhana-page {isolation:isolate}
+.gymkhana-page .g-hero {z-index:0;will-change:transform}
+.gymkhana-page > .g-section {position:relative;z-index:1;background-color:#161616}
+.gymkhana-page .g-photo-section {box-shadow:0 -20px 55px #0003}
+.gymkhana-page .g-hero-bottom {border-top:0;position:absolute}
+.g-photo-progress {position:absolute;top:0;left:0;width:100%;height:1px;background:#ffffff40;overflow:hidden}
+.g-photo-progress > span {display:block;width:100%;height:100%;background:#fff;transform:scaleX(var(--hero-progress,0));transform-origin:left}
+.gymkhana-page .g-actions {gap:0}
+.gymkhana-page .g-actions .slanted + .slanted {margin-left:-4px}
+.gymkhana-page .g-hero .g-kicker {color:#fff;opacity:1;text-shadow:0 2px 12px #000;font-weight:700;display:flex;align-items:center;gap:12px}
+.gymkhana-page .g-hex {flex:none;width:32px;height:36px;margin:0}
+.g-hex svg {animation:g-hex-spin 14s linear infinite}
+@keyframes g-hex-spin {to{transform:rotate(360deg)}}
+.g-hero-autoplay > img.is-active {animation-duration:5.5s;animation-play-state:paused}
+.g-hero-autoplay.is-running > img.is-active {animation-play-state:running}
+.g-mobile-register {display:none}
+.gymkhana-page .g-logo-section {display:flex;flex-direction:column;justify-content:center;min-height:520px;background:#080808;padding-top:60px;padding-bottom:60px}
+.g-logo-section h2 {margin-bottom:0}
+.g-logo-orbit {--ring-radius:470px;height:290px;perspective:1100px;margin-top:0}
+.g-logo-orbit::before,.g-logo-orbit::after {content:"";position:absolute;top:0;bottom:0;width:14%;z-index:2;pointer-events:none;backdrop-filter:blur(3px);mask-image:linear-gradient(90deg,#000,transparent)}
+.g-logo-orbit::before {left:0}.g-logo-orbit::after {right:0;transform:rotate(180deg)}
+.gymkhana-page .g-score-grid {border-left:1px solid #ffffff25;border-right:1px solid #ffffff25}
+.gymkhana-page .g-score-grid h3 {text-wrap:pretty}
+.gymkhana-page .g-event-video {padding-left:0;padding-right:0;overflow:hidden}
+.g-event-video > h2,.g-event-video > .g-kicker,.g-event-video > .g-video-fallback {margin-left:var(--g-space);margin-right:var(--g-space)}
+.gymkhana-page .g-event-video .g-video-frame {width:100%;max-width:none;border:0;aspect-ratio:16/9;transform-origin:center;will-change:scale}
+.gymkhana-page .g-prize-section {grid-template-columns:1fr 1fr;align-items:start;background:#090909}
+.g-prize-text {padding:25px 0 25px 30px;border-left:2px solid #e4001c}
+.gymkhana-page .g-schedule {align-items:start}
+@media(min-width:768px){.gymkhana-page .g-schedule > div:first-child {position:sticky;top:120px;align-self:start}}
+.g-horizontal-rail {display:flex;gap:20px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:20px 4px;cursor:grab;scrollbar-width:thin;scrollbar-color:#555 transparent}
+.g-horizontal-rail:active {cursor:grabbing}
+.g-horizontal-rail > * {scroll-snap-align:start;flex-shrink:0}
+.gymkhana-page .g-pilot-rail .g-pilot-profile {width:min(900px,88%);padding:70px 27% 30px 7%;min-height:300px;margin-top:15px}
+.g-pilot-rail .g-pilot-info {position:relative;width:520px;max-width:100%;z-index:1}
+.g-pilot-rail .g-pilot-top {grid-template-columns:55px 1fr 1fr 1fr;gap:15px}
+.g-pilot-rail .g-pilot-number {width:55px;height:64px}
+.gymkhana-page .g-pilot-rail .g-pilot-top h3,.gymkhana-page .g-pilot-rail .g-pilot-top p {font-size:17px}
+.gymkhana-page .g-pilot-rail .g-pilot-team {font-size:16px}
+.g-pilot-rail .g-pilot-portrait {height:300px;right:2%}
+.g-review-rail {margin-top:30px}
+.g-review-card {width:42%;background:#222;padding:38px;min-height:280px;display:flex;flex-direction:column;gap:25px;border-top:2px solid #e4001c}
+.gymkhana-page .g-review-card p {font-size:clamp(18px,2.3vw,32px);line-height:1.4;color:white;margin:0}
+.g-review-card strong {margin-top:auto}.g-review-card a {color:#aaa;font-size:12px;text-decoration:underline}
+.gymkhana-page p {text-wrap:pretty}
+@media(max-width:767px){
+.gymkhana-page .g-hero .g-actions {display:none}
+.g-mobile-register {display:block;align-self:stretch;background:#1114;color:white;border:1px solid #ffffff80;padding:16px 28px;font:inherit;transform:skewX(-12deg);cursor:pointer}
+.gymkhana-page .g-hero-bottom {gap:20px;padding-top:22px;bottom:22px}
+.gymkhana-page .g-hero {padding-bottom:195px;min-height:610px}
+.gymkhana-page .g-hero .g-kicker {font-size:10px;line-height:1.5;gap:8px}
+.gymkhana-page .g-hero .g-hex {width:25px;height:28px;font-size:25px}
+.gymkhana-page .g-intro h2 {font-size:clamp(28px,7.6vw,40px);line-height:1.08}
+.gymkhana-page .g-logo-section {min-height:420px;padding:48px 20px 30px}
+.gymkhana-page .g-logo-section h2 {font-size:26px}
+.g-logo-orbit {--ring-radius:190px;height:250px;perspective:470px}
+.g-logo-orbit .g-logo-face {width:54px;left:-27px;height:58px;top:-29px}
+.g-logo-orbit .g-logo-face img {max-width:52px;max-height:30px}
+.g-logo-orbit .g-logo-ring {rotate:x -12deg}
+.g-logo-orbit::before,.g-logo-orbit::after {width:12%;backdrop-filter:blur(1.5px)}
+.gymkhana-page .g-score-grid > div {padding:22px 18px;min-width:0}
+.gymkhana-page .g-score-grid h3 {font-size:16px;line-height:1.4;word-break:normal;overflow-wrap:normal}
+.gymkhana-page .g-prize-section {grid-template-columns:1fr}.g-prize-text {padding:12px 0 12px 20px}
+.gymkhana-page .g-pilot-rail .g-pilot-profile {width:88%;min-height:470px;padding:60px 22px 245px;margin:15px 0 0}
+.g-pilot-rail .g-pilot-top {grid-template-columns:1fr 1fr;gap:16px}
+.g-pilot-rail .g-pilot-info {width:auto}
+.g-pilot-rail .g-pilot-portrait {height:245px;right:2%}
+.gymkhana-page .g-pilot-rail .g-pilot-team {font-size:12px;margin-top:18px}
+.gymkhana-page .g-pilot-rail .g-pilot-top p {font-size:12px}
+.g-review-card {width:88%;padding:24px;min-height:300px}
+.gymkhana-page .g-review-card p {font-size:19px}
+.footer-brand {padding-top:25px;padding-bottom:15px}
+}
+@media(prefers-reduced-motion:reduce){.g-hex svg {animation:none}.gymkhana-page .g-hero {will-change:auto;transform:none!important}.g-photo-progress {display:none}.g-logo-orbit::before,.g-logo-orbit::after {display:none}.g-logo-orbit .g-logo-ring {rotate:none}.gymkhana-page .g-event-video .g-video-frame {scale:1!important;will-change:auto}}
+.mobile-brand.header-loading {opacity:0;animation:none!important}
+.mobile-brand.header-ready {animation:g-mobile-header-enter .5s ease both}
+@keyframes g-mobile-header-enter {from {opacity:0;transform:translateY(-10px)} to {opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.mobile-brand.header-ready {animation:none}}
+.gymkhana-page .g-hero-bottom {transform:translateY(calc(-1 * var(--hero-shift,0px)))}
+.gymkhana-page .g-hex {font-size:32px}
+@media(max-width:767px){.gymkhana-page .g-hero .g-hex {font-size:25px}}
+.gymkhana-page .g-event-video > h2 {margin-left:var(--g-space);margin-right:var(--g-space)}
+@media(max-width:767px){.gymkhana-page .g-logo-orbit {height:210px;margin-top:-20px}}
+/* Pre-publication refinements */
+.gymkhana-page .g-hero {height:auto;min-height:100svh;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-end;gap:42px;padding:170px var(--g-space) 35px;transform:none!important}
+.gymkhana-page .g-hero-bottom {position:relative;inset:auto;transform:none;padding-top:25px;flex-wrap:wrap;gap:22px;width:100%}
+.gymkhana-page .g-hero-copy {flex:none}
+.gymkhana-page .g-intro {align-items:start}
+.gymkhana-page .g-intro h2 {font-size:clamp(34px,4.2vw,62px)}
+.gymkhana-page .g-track {background:transparent;border:0}
+.gymkhana-page .g-track img {mix-blend-mode:normal;background:transparent}
+.gymkhana-page .g-digit-mask {height:auto;min-width:2.3ch;overflow:visible;line-height:1.2;flex-shrink:0}
+.gymkhana-page .g-digit-mask > span {transform:none}
+.g-photo-break {position:relative;z-index:1;height:70svh;min-height:330px;overflow:hidden;background:#161616}
+.g-photo-break img {width:100%;height:100%;object-fit:cover;will-change:transform}
+.gymkhana-page .g-participate {display:block;padding-top:0}
+.g-driver-banner {display:block;width:calc(100% + 2 * var(--g-space));max-width:none;margin:0 calc(-1 * var(--g-space)) 0;height:clamp(200px,30vw,420px);object-fit:cover}
+.gymkhana-page .g-participate > div {max-width:none}
+.gymkhana-page .g-series-toggle {display:flex;width:100%}
+.gymkhana-page .g-series-toggle button {flex:1;min-width:0}
+.g-pilot-rail {gap:6px}
+.g-pilot-rail .g-pilot-red {clip-path:polygon(3% 0,100% 0,97% 100%,0 100%)}
+.g-review-location {color:#aaa;font-size:11px;letter-spacing:.08em}
+.gymkhana-page .g-review-card p {font-family:Druk,sans-serif;font-size:clamp(28px,3vw,44px);line-height:1.05;text-transform:uppercase}
+.gymkhana-page .g-application {position:relative;isolation:isolate;overflow:hidden;background:#0b0b0b;display:block}
+.g-application > div:not(.g-form-lines),.g-application form {position:relative;z-index:1;max-width:760px;margin-inline:auto}
+.g-form-lines {position:absolute;inset:0;z-index:0;pointer-events:none;background:repeating-linear-gradient(115deg,transparent 0 210px,#ffffff18 211px,transparent 212px,transparent 217px,#ffffff12 218px,transparent 219px),repeating-linear-gradient(0deg,transparent 0 220px,#ffffff12 221px,transparent 222px);animation:g-form-lines 16s linear infinite;mask-image:linear-gradient(transparent,#000 15%,#000 85%,transparent)}
+@keyframes g-form-lines {to{background-position:240px 0,0 0}}
+.g-application fieldset {border:0;padding:0;margin:0;min-width:0;display:grid;gap:12px}
+.g-application fieldset[hidden] {display:none}
+.g-form-steps {display:flex;align-items:center;gap:18px;margin:28px 0}
+.g-form-steps button,.g-form-steps > div {display:flex;gap:12px;align-items:center;background:none;border:0;color:white;font:inherit;text-align:left;padding:0}
+.g-form-steps b {display:grid;place-items:center;width:34px;height:34px;background:#292929;border-radius:3px;font-size:13px}
+.g-form-steps [aria-current=step] b {background:#ed001b}
+.g-form-steps span {font-size:12px}.g-form-steps small {display:block;font-size:10px;color:#aaa;margin-top:6px}
+.g-step-line {width:40px;height:1px;background:#555}
+.gymkhana-page .g-application .g-floating {position:relative;display:block;margin:0}
+.gymkhana-page .g-application .g-floating input {display:block;width:100%;height:65px;padding:26px 18px 8px;border:1px solid transparent;background:#262626;color:white;font:inherit;font-size:15px;border-radius:0}
+.g-floating > span {position:absolute;left:18px;top:22px;color:#babfc4;font-size:14px;pointer-events:none;transition:transform .2s,font-size .2s}
+.g-floating input:focus + span,.g-floating input:not(:placeholder-shown) + span {transform:translateY(-14px);font-size:10px}
+.g-form-series {display:flex;gap:8px}.g-form-series label {flex:1;position:relative}.g-form-series input {position:absolute;opacity:0}.g-form-series span {display:block;text-align:center;padding:15px 8px;background:#252525;border:1px solid #555}.g-form-series input:checked + span {border-color:#ed001b;background:#ed001b25}.g-form-series input:focus-visible + span {outline:2px solid white}
+.gymkhana-page .g-application .g-consent {display:flex;align-items:center;gap:12px;font-size:12px;line-height:1.5;margin:12px 0}
+.g-application .g-consent input {appearance:none;flex:none;width:40px;height:22px;border-radius:20px;border:1px solid #555;background:#222;padding:2px;cursor:pointer}.g-consent input::before {content:'';display:block;width:16px;height:16px;border-radius:50%;background:white;transition:transform .2s}.g-consent input:checked {background:#ed001b}.g-consent input:checked::before {transform:translateX(17px)}
+.g-form-submit {width:100%;border:0;padding:20px;background:#ed001b;color:white;font:inherit;font-size:14px;font-weight:700;clip-path:polygon(3% 0,100% 0,97% 100%,0 100%);cursor:pointer}
+.g-form-submit:focus-visible {outline:3px solid white;outline-offset:-6px}
+@media(max-width:767px){
+.gymkhana-page .g-hero {padding:150px 20px 35px;min-height:calc(100svh - 70px);gap:32px}
+.gymkhana-page .g-hero-bottom {bottom:auto;gap:20px}
+.g-mobile-register {font-style:normal}.g-mobile-register span {display:block;transform:skewX(12deg)}
+.gymkhana-page .g-photo-grid {display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;scrollbar-width:none;height:auto;touch-action:pan-x pan-y}
+.gymkhana-page .g-photo-grid > button {flex:0 0 86%;height:380px;scroll-snap-align:start;min-width:0}
+.gymkhana-page .g-logo-orbit {--ring-radius:340px;perspective:1100px;height:240px;margin-top:0}
+.g-logo-orbit .g-logo-ring {rotate:none}
+.g-logo-orbit .g-logo-face {width:70px;left:-35px}.g-logo-orbit .g-logo-face img {max-width:68px;max-height:36px}
+.gymkhana-page .g-steps li {grid-template-columns:48px minmax(0,1fr);gap:12px}
+.gymkhana-page .g-steps b {font-size:32px}
+.gymkhana-page .g-score-grid > div {padding:18px 12px}
+.gymkhana-page .g-score-grid h3 {font-size:13px;line-height:1.4;hyphens:auto;overflow-wrap:anywhere}
+.gymkhana-page .g-series-toggle button {font-size:12px;padding:16px 5px}
+.g-pilot-rail {gap:4px}
+.g-driver-banner {height:240px;margin-bottom:35px;object-position:50% 50%;margin-bottom:0}
+.gymkhana-page .g-review-card p {font-size:30px}
+.g-form-steps {gap:10px}.g-step-line {width:20px}.g-floating > span {font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.g-form-lines {animation:none}.g-photo-break img {transform:none!important}.g-floating > span,.g-consent input::before {transition:none}}
+/* Track and driver compositions. */
+.gymkhana-page .g-track-info {position:relative;isolation:isolate;padding:40px 10%;align-self:center}
+.g-track-info::before {content:'';position:absolute;inset:0;background:#222;clip-path:polygon(9% 0,100% 0,91% 100%,0 100%);z-index:-1}
+.gymkhana-page .g-track {clip-path:none;padding:0;background:transparent}
+.gymkhana-page .g-bonuses {padding-top:110px;padding-bottom:90px}
+.g-driver-banner {mask-image:linear-gradient(to bottom,#000 0%,#000 42%,transparent 100%)}
+.gymkhana-page .g-participate {background:#161616}
+.gymkhana-page .g-participate > div {padding-top:20px}
+.gymkhana-page .g-participate .g-series-toggle {width:100%;max-width:none}
+@media(max-width:767px){.gymkhana-page .g-bonuses {padding-top:65px;padding-bottom:65px}.gymkhana-page .g-track-info {padding:30px 10%}.gymkhana-page .g-participate .slanted {width:100%}.gymkhana-page .g-participate .slanted-center {flex:1;min-width:0}.gymkhana-page .g-participate > div {padding-top:8px}}
+
+.gymkhana-page .g-photo-break + .g-bonuses {margin-top:32px}

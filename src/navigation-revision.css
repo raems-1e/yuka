@@ -1,0 +1,441 @@
+/* Each control owns a fixed label box; hover cannot collapse RU/EN. */
+.compact-select {
+  flex: 0 0 64px;
+  width: 64px;
+  margin: 0;
+  z-index: 2;
+}
+.compact-select.select-series {
+  flex-basis: 80px;
+  width: 80px;
+}
+.compact-select:focus-within {
+  z-index: 5;
+}
+.compact-select .language-trigger {
+  width: 100%;
+  padding: 0 8px;
+  gap: 7px;
+  background: #ffffff08;
+  isolation: isolate;
+}
+.compact-select .rolling-label {
+  flex: none;
+  min-width: 2.3em;
+}
+.select-series .rolling-label {
+  min-width: 3.4em;
+}
+.compact-select .language-chevron {
+  width: 14px;
+  height: 14px;
+  flex: none;
+}
+.compact-select .language-popover {
+  top: calc(100% + 8px);
+  width: 210px;
+  background: rgba(18, 18, 18, 0.97);
+  backdrop-filter: blur(12px);
+}
+.compact-select .language-option {
+  font-size: 12px;
+}
+.compact-select .language-option span:last-child {
+  color: #aaa;
+  font-size: 10px;
+}
+.menu-close {
+  width: 44px;
+  justify-content: center;
+  padding: 0;
+}
+#navigation-menu::backdrop {
+  background: #0005;
+  backdrop-filter: blur(3px);
+}
+.menu-sheet {
+  inset: 102px 20px auto auto;
+  width: min(620px, calc(100% - 40px));
+  max-height: calc(100dvh - 122px);
+  background: rgba(12, 12, 12, 0.82);
+  backdrop-filter: blur(22px);
+  border-top: 1px solid #ffffff32;
+  padding: 12px 24px 24px;
+  animation: menu-from-top 240ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  box-shadow: 0 24px 60px #0005;
+}
+.menu-sheet nav button {
+  border-color: #ffffff2a;
+}
+.menu-meta {
+  padding-bottom: 8px;
+}
+.menu-meta > span {
+  color: #bbb;
+}
+.menu-settings {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 28px;
+  padding: 16px 8px 8px;
+  border-color: #ffffff2a;
+  min-height: 76px;
+}
+.menu-settings > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+}
+.menu-settings .compact-select {
+  margin: 0;
+}
+.menu-settings .language-popover {
+  top: auto;
+  bottom: calc(100% + 8px);
+  right: 0;
+}
+.menu-actions {
+  display: none;
+}
+@keyframes menu-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 1024px) {
+  .desktop-header {
+    gap: 24px;
+  }
+  .desktop-nav {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+    margin-left: 26px;
+    margin-right: 27px;
+    --nav-height: 62px;
+    --nav-cut: 27px;
+    isolation: isolate;
+  }
+  .desktop-nav::before {
+    content: "";
+    position: absolute;
+    inset: 0 -27px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.72);
+    clip-path: polygon(
+      var(--nav-cut) 0,
+      100% 0,
+      calc(100% - var(--nav-cut)) 100%,
+      0 100%
+    );
+  }
+  .nav-edge {
+    display: none;
+  }
+  .nav-main {
+    background: transparent;
+    min-height: var(--nav-height);
+    gap: 14px;
+    padding: 9px 8px;
+    justify-content: space-between;
+  }
+  .nav-main > button,
+  .nav-main > .compact-select,
+  .desktop-actions {
+    flex-shrink: 0;
+  }
+  .nav-main .wide-link,
+  .nav-main button {
+    font-size: 11px;
+  }
+  .nav-main .wide-link {
+    display: block;
+    padding: 12px 0;
+  }
+  .desktop-actions {
+    margin: 0 -21px 0 0;
+    gap: 0;
+  }
+  .desktop-actions .slanted:first-child > .slanted-center {
+    width: 145px;
+    padding-inline: 10px;
+  }
+  .desktop-actions .slanted:last-child > .slanted-center {
+    width: 206px;
+    padding-inline: 10px;
+  }
+  .desktop-menu {
+    gap: 6px;
+    padding-inline: 0;
+  }
+  .desktop-menu svg {
+    flex: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .desktop-header {
+    height: 156px;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  .brand {
+    margin-top: 16px;
+  }
+  .desktop-nav {
+    --nav-height: 116px;
+    --nav-cut: 50px;
+  }
+  .nav-main {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: 24px;
+    row-gap: 10px;
+    padding-inline: 12px;
+  }
+  .nav-main > .wide-link:first-child {
+    margin-right: auto;
+  }
+  .desktop-actions {
+    flex-basis: 100%;
+    justify-content: flex-end;
+    margin-right: 0;
+  }
+  .menu-sheet {
+    top: 156px;
+    max-height: calc(100dvh - 176px);
+  }
+}
+@media (max-width: 1023px) {
+  .menu-sheet {
+    inset: 0 0 auto;
+    width: 100%;
+    max-height: 100dvh;
+    padding: calc(10px + env(safe-area-inset-top)) 16px
+      calc(24px + env(safe-area-inset-bottom));
+    border-top: 0;
+    border-bottom: 1px solid #ffffff32;
+  }
+  .menu-settings {
+    gap: 20px;
+    justify-content: space-between;
+    padding: 12px 4px 18px;
+    flex-wrap: wrap;
+  }
+  .menu-settings > div {
+    gap: 8px;
+  }
+  .menu-actions {
+    display: grid;
+    gap: 10px;
+  }
+  .menu-actions .slanted-center {
+    white-space: nowrap;
+  }
+  .menu-meta {
+    padding-bottom: 4px;
+  }
+  .menu-sheet nav button {
+    min-height: 46px;
+  }
+}
+/* Smooth crossfades, not display swaps. Timings are a 240ms adaptation. */
+.yc-tab::before {
+  transition: background-color 240ms ease-in-out;
+}
+.yc-tab {
+  transition: color 240ms ease-in-out;
+  filter: none !important;
+}
+.yc-arrows {
+  display: block !important;
+  opacity: 1;
+  transition: opacity 240ms ease-in-out;
+}
+.yuka-calendar[data-mode="pro"] .yc-arrows-lite,
+.yuka-calendar[data-mode="lite"] .yc-arrows-pro {
+  opacity: 0;
+}
+.yc-arrows .arrow-rest {
+  display: block;
+  transition: opacity 240ms ease-in-out;
+}
+.yc-arrows .arrow-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  opacity: 0;
+  transition: opacity 240ms ease-in-out;
+}
+.yc-arrows img {
+  visibility: visible !important;
+}
+.yc-arrows-pro {
+  background: none !important;
+}
+.yc-tabs:has(.yc-tab[aria-selected="false"]:focus-visible) .arrow-rest {
+  opacity: 0;
+}
+.yc-tabs:has(.yc-tab[aria-selected="false"]:focus-visible) .arrow-hover {
+  opacity: 1;
+}
+@media (hover: hover) {
+  .yc-tabs:has(.yc-tab[aria-selected="false"]:hover) .arrow-rest {
+    opacity: 0;
+  }
+  .yc-tabs:has(.yc-tab[aria-selected="false"]:hover) .arrow-hover {
+    opacity: 1;
+  }
+}
+@media (max-width: 640px) {
+  .yc-tab-logo {
+    position: relative;
+    width: 100%;
+    height: 48px;
+  }
+  .yc-tab-logo img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    object-fit: contain;
+    display: block !important;
+    transition: opacity 240ms ease-in-out;
+  }
+  .yc-tab-active-logo {
+    opacity: 0;
+  }
+  .yc-tab[aria-selected="true"] .yc-tab-active-logo {
+    opacity: 1;
+  }
+  .yc-tab[aria-selected="true"] .yc-tab-inactive-logo {
+    opacity: 0;
+  }
+  .yc-tab::before {
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  }
+}
+.gallery-rail {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.gallery-rail::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* 40px outside / 32px inside, same slope: 19/32. Side inset is ~4px normal to the edge. */
+.year-switch {
+  width: 211px;
+  height: 40px;
+  padding: 4px 7px;
+  transform: none;
+  background: none;
+  justify-content: flex-start;
+  isolation: isolate;
+}
+.year-switch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #0c0c0c;
+  clip-path: polygon(23.75px 0, 100% 0, calc(100% - 23.75px) 100%, 0 100%);
+}
+.year-switch button {
+  flex: 0 0 108px;
+  width: 108px;
+  transform: none;
+}
+.year-switch button + button {
+  margin-left: -19px;
+}
+.year-edge {
+  flex: 0 0 19px;
+  width: 19px;
+}
+.year-switch button:hover {
+  filter: none;
+  --year-fill: #272727;
+}
+.year-switch button[aria-pressed="true"] {
+  --year-fill: var(--red);
+}
+.year-center,
+.year-edge {
+  transition: background-color 200ms ease;
+}
+.season-statistics::before {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: max(2043px, 100%) auto;
+}
+.stats-content {
+  min-height: 380px;
+}
+.stats-content > .content-pending {
+  min-height: 303px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  border: 1px solid #ffffff26;
+  background: #1c1c1cb3;
+  max-width: 774px;
+  padding: 32px;
+  line-height: 1.7;
+}
+@media (max-width: 640px) {
+  .stats-content {
+    min-height: 750px;
+  }
+  .stats-content > .content-pending {
+    min-height: 673px;
+    padding: 24px;
+    max-width: 300px;
+  }
+  .season-statistics::before {
+    background-position: center top;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-sheet {
+    animation: none;
+  }
+  .yc-tab,
+  .yc-tab::before,
+  .yc-arrows,
+  .yc-arrows .arrow-rest,
+  .yc-arrows .arrow-hover,
+  .yc-tab-logo img,
+  .year-center,
+  .year-edge {
+    transition: none !important;
+  }
+}
+.menu-settings > div:first-child .language-popover {
+  left: 0;
+  right: auto;
+}
+.menu-settings > div:nth-child(2) .language-popover {
+  left: auto;
+  right: 0;
+}
+.year-switch button {
+  clip-path: polygon(19px 0, 100% 0, calc(100% - 19px) 100%, 0 100%);
+}
+.year-switch button:focus-visible {
+  outline: none;
+}
+.year-switch button:focus-visible .year-center {
+  outline: 2px solid white;
+  outline-offset: -4px;
+}

@@ -1,0 +1,26 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="117.806" height="140.057" viewBox="0 0 117.806 140.057" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 2087329577" style="mix-blend-mode:luminosity" opacity="0.42">
+<path id="Polygon 1" d="M61.1911 66.5617L28.5048 129.406L14.3495 14.1204L61.1911 66.5617Z" fill="url(#paint0_linear_0_79)"/>
+<path id="Polygon 2" d="M75.7417 66.7255L44.8629 129.333L30.7076 14.0477L75.7417 66.7255Z" fill="url(#paint1_linear_0_79)"/>
+<path id="Polygon 3" d="M92.6852 66.5619L59.9989 129.406L45.8436 14.1206L92.6852 66.5619Z" fill="url(#paint2_linear_0_79)"/>
+<path id="Polygon 4" d="M109.634 66.56L76.9477 129.404L62.7924 14.1187L109.634 66.56Z" fill="url(#paint3_linear_0_79)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_79" x1="56.6203" y1="62.2412" x2="22.1248" y2="66.4767" gradientUnits="userSpaceOnUse">
+<stop stop-color="#347DED" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#285AA6" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_79" x1="71.3517" y1="62.3813" x2="38.4242" y2="66.4242" gradientUnits="userSpaceOnUse">
+<stop stop-color="#347DED" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#285AA6" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint2_linear_0_79" x1="88.1144" y1="62.2413" x2="53.6189" y2="66.4769" gradientUnits="userSpaceOnUse">
+<stop stop-color="#347DED" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#285AA6" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint3_linear_0_79" x1="105.063" y1="62.2394" x2="70.5677" y2="66.4749" gradientUnits="userSpaceOnUse">
+<stop stop-color="#347DED" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#285AA6" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,34 @@
+{
+  "fileKey": "IEBn4tysiHIW9jUw0NJqjr",
+  "nodes": {
+    "pro": "792:8469",
+    "lite": "844:11279",
+    "mobileTicket": "685:6506",
+    "tabletTicket": "685:5226",
+    "hover": "1540:72458",
+    "tablet768": "685:5351"
+  },
+  "assets": {
+    "pro-logo.svg": "https://www.figma.com/api/mcp/asset/bfe3e22d-cf46-49c3-bcdb-89f48141636c.svg",
+    "pro-logo-mobile.svg": "https://www.figma.com/api/mcp/asset/8d894899-1786-4543-bc4b-390bbdc67388.svg",
+    "arrows-pro.svg": "https://www.figma.com/api/mcp/asset/a25d15a9-8304-479f-918e-a7598ae37e17.svg",
+    "arrows-pro-mobile.svg": "https://www.figma.com/api/mcp/asset/b0458943-d767-43bc-bffa-252e79532f58.svg",
+    "arrows-lite-mobile.svg": "https://www.figma.com/api/mcp/asset/33c70f5c-c689-4cfc-99e5-30689fe9ceec.svg",
+    "arrows-lite.svg": "https://www.figma.com/api/mcp/asset/f0ecce1a-65b2-495c-8ed8-d513ca914446.svg",
+    "tab-pro-active.svg": "https://www.figma.com/api/mcp/asset/21c9d2b4-be29-42fd-9039-edb49f7fa181.svg",
+    "tab-pro.svg": "https://www.figma.com/api/mcp/asset/54ccb512-d363-43ba-bc17-bbd2fa0b029f.svg",
+    "tab-lite.svg": "https://www.figma.com/api/mcp/asset/02629caa-dcaf-47a5-9546-6defa867d4a1.svg",
+    "tab-lite-active.svg": "https://www.figma.com/api/mcp/asset/4cd9c306-b2fc-4115-ac7c-d758f724dc51.svg",
+    "map-grid-h.svg": "https://www.figma.com/api/mcp/asset/6b1ad168-1efd-4f9b-90e7-0746adbaf601.svg",
+    "map-grid-v.svg": "https://www.figma.com/api/mcp/asset/999d7ac7-dc51-4574-8b56-4596c5334987.svg",
+    "map-path.svg": "https://www.figma.com/api/mcp/asset/60c2f359-1e59-4197-9659-e8a9a8a46003.svg",
+    "map-mobile.svg": "https://www.figma.com/api/mcp/asset/5b2725c8-b86c-459e-b09f-b5ef80d904e9.svg",
+    "eye.svg": "https://www.figma.com/api/mcp/asset/e815f16a-17ef-4e72-a205-7005e862ab15.svg",
+    "lite-logo.png": "https://www.figma.com/api/mcp/asset/1562382b-1485-422a-9b51-b518775f02c5.png",
+    "lite-logo-mobile.png": "https://www.figma.com/api/mcp/asset/06bf8245-2671-49d7-a35e-b38d46a953a1.png",
+    "map-hover-grid-h.svg": "https://www.figma.com/api/mcp/asset/e0c1572b-c831-46f9-9b69-46616bc112b1.svg",
+    "map-hover-grid-v.svg": "https://www.figma.com/api/mcp/asset/3da49b29-4fca-4497-97af-52e1526d28cf.svg",
+    "eye-hover.svg": "https://www.figma.com/api/mcp/asset/2ea3fbc5-ae73-4335-af10-be4f1865da44.svg",
+    "map-hover-path.svg": "https://www.figma.com/api/mcp/asset/da1d3099-8ad5-415b-af69-2e2a72669b77.svg"
+  }
+}

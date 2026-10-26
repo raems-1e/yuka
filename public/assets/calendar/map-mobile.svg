@@ -1,0 +1,53 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="311" height="120" viewBox="0 0 311 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="map" clip-path="url(#clip0_0_13)">
+<g id="Container">
+<path id="Line 24" d="M0 102H311" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 26" d="M0 78H311" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 28" d="M0 55H311" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 30" d="M0 31H311" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 25" d="M0 90H311" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 27" d="M0 66H311" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 29" d="M0 43H311" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 31" d="M0 19H311" stroke-linecap="round" stroke="#1E1E1E"/>
+</g>
+<path id="Line 47" d="M86 19L86 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 48" d="M215 19L215 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 33" d="M110 19L110 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 45" d="M-4.00135e-06 19L-7.62939e-06 102" stroke-linecap="round" stroke="white"/>
+<path id="Line 34" d="M133 19L133 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 42" d="M50 19L50 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 35" d="M157 19L157 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 43" d="M74 19L74 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 36" d="M98 19L98 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 49" d="M239 19L239 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 37" d="M122 19L122 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 45_2" d="M39 19L39 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 38" d="M145 19L145 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 46" d="M62 19L62 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 41" d="M27 19L27 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 50" d="M262 19L262 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 59" d="M297 19L297 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 51" d="M179 19L179 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 52" d="M286 19L286 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 53" d="M203 19L203 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 54" d="M227 19L227 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 44" d="M15 19L15 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 55" d="M251 19L251 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 56" d="M168 19L168 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 57" d="M274 19L274 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 58" d="M191 19L191 102" stroke-linecap="round" stroke="#1E1E1E"/>
+<path id="Line 39" d="M311 19L311 102" stroke-linecap="round" stroke="white"/>
+<g id="Objects" clip-path="url(#clip1_0_13)">
+<path id="Vector" d="M128.11 70.85L113.37 84.08C112.58 84.79 111.35 84.07 111.58 83.03L112.86 77.24C113.01 76.56 113.09 75.86 113.09 75.16C113.09 72.54 114.15 70.04 116.03 68.21L122.8 61.65C123.51 60.96 124.01 60.07 124.22 59.1C124.65 57.1 126.25 55.56 128.27 55.21C131.93 54.58 135.38 53.02 138.28 50.69C142.86 47.01 147.93 43.97 153.34 41.67L174 32.86C175.54 32.2 177.33 32.61 178.44 33.87C179.5 35.08 181.19 35.51 182.69 34.96L186.04 33.73C187.58 33.17 189.3 33.63 190.35 34.88L198.39 44.49C199.89 46.28 199.6 48.96 197.76 50.39C196.08 51.7 193.67 51.5 192.22 49.94L190.9 48.52C189.06 46.54 186.3 45.72 183.67 46.36L171.88 49.26C168.71 50.04 166.65 53.1 167.13 56.34L167.21 56.89C167.59 59.44 169.47 61.51 171.98 62.12L181.31 64.38C183.69 64.96 185.23 67.26 184.86 69.68C184.54 71.78 185.66 73.83 187.59 74.7L190 75.78C193.21 77.22 194.5 81.1 192.77 84.17C191.14 87.07 187.45 88.08 184.57 86.42L179.77 83.65C176.48 81.75 173.62 79.19 171.38 76.13C167.75 71.19 162.57 67.61 156.67 65.95C154.32 65.29 151.8 65.86 149.96 67.47L146.44 70.54C145.4 71.45 144.11 72.04 142.75 72.24L133.61 73.6C132.55 73.76 131.57 73.04 131.38 71.99C131.11 70.47 129.28 69.83 128.13 70.86L128.11 70.85Z" stroke-width="2" stroke-miterlimit="10" stroke="white"/>
+<path id="Vector_2" d="M119.43 74.4502L123.42 79.4702" stroke-width="2" stroke-miterlimit="10" stroke="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_13">
+<rect width="311" height="120" fill="white"/>
+</clipPath>
+<clipPath id="clip1_0_13">
+<rect width="90.89" height="57.75" fill="white" transform="translate(110 31)"/>
+</clipPath>
+</defs>
+</svg>
