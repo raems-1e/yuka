@@ -54,7 +54,11 @@ export function CompactSelect({
       className={`desktop-language compact-select select-${kind} ${value === "ar" ? "event-language" : ""}`}
       ref={root}
       onBlur={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget)) setOpen(false);
+        // Safari can blur a button with relatedTarget=null before a touch click.
+        // Keep the panel mounted until the click; pointerdown handles outside taps.
+        if (e.relatedTarget && !e.currentTarget.contains(e.relatedTarget)) {
+          setOpen(false);
+        }
       }}
       onKeyDown={(e) => {
         if (e.key === "Escape" && open) {

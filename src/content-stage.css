@@ -566,7 +566,8 @@ html[dir="rtl"] .organizer-brand h2 {
     overflow-x: auto;
     scrollbar-width: none;
     scroll-snap-type: x proximity;
-    padding: 3px 12px;
+    padding: 3px 20px;
+    scroll-padding-inline: 20px;
     gap: 4px;
   }
   .news-card {

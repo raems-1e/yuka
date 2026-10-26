@@ -169,7 +169,7 @@
   font-family: Druk, sans-serif;
   font-size: 42px;
   line-height: 1;
-  letter-spacing: -2.1px;
+  letter-spacing: 0;
 }
 .cooperation-cards {
   margin-top: 158px;
@@ -229,7 +229,7 @@
   text-align: end;
   font-family: Druk, sans-serif;
   font-size: clamp(25px, 2.9vw, 42px);
-  letter-spacing: -1.5px;
+  letter-spacing: 0;
   line-height: 1;
   color: #ffffffb8;
 }
@@ -473,7 +473,7 @@ html[dir="rtl"] .cooperation-card h3 {
   }
   .cooperation-heading h2 {
     font-size: 24px;
-    letter-spacing: -1.2px;
+    letter-spacing: 0;
     line-height: 0.95;
     max-width: 355px;
   }
@@ -889,3 +889,8 @@ html[dir="rtl"] .cooperation-card h3 {
 @keyframes season-lines-drift {to{background-position:160px center}}
 @media(max-width:767px){#navigation-menu .menu-bottom-row {flex-direction:column;gap:20px;padding:20px 0 0}#navigation-menu .menu-bottom-row .menu-actions {width:100%;flex-direction:column;gap:12px}#navigation-menu .menu-bottom-row .menu-settings {width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.season-statistics::before {animation:none}}
+
+/* Safari keeps scroll-snapped news inset and uses the real Druk weight. */
+.news-rail {scroll-padding-inline:20px}
+.cooperation-heading h2,.cooperation-card h3 {font-weight:900;letter-spacing:normal;font-kerning:normal}
+@media(max-width:767px){.news-rail {padding-inline:20px}.cooperation-heading h2 {line-height:1.12}.cooperation-card h3 {line-height:1.08}}
