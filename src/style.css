@@ -1,11 +1,13 @@
 @font-face {
   font-family: Bounded;
-  src: url("/assets/Bounded.ttf");
+  src: url("/assets/Bounded.woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: Druk;
-  src: url("/assets/Druk.otf");
+  src: url("/assets/Druk.woff2");
   font-weight: 900;
+  font-display: swap;
 }
 :root {
   --bg: #1c1c1c;

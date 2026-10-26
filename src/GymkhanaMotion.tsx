@@ -5,24 +5,37 @@ import { Expand } from "lucide-react";
 
 import { PhotoViewer } from "./PhotoViewer";
 import { partnerLogos, PartnerLogo } from "./ContentSections";
-const photos = ["008", "063", "068", "070", "075"].map((n,i)=>({file:`gym-2026-${n}.jpg`,ru:["Заезд на трассе", "Зрители фестиваля", "Болельщики у трассы", "Пилоты перед стартом", "Автомобили после заезда"][i],en:"Yuka Gymkhana 2026"}));
+const photos = ["008", "063", "068", "070", "075"].map((n,i)=>({file:`gym-2026-${n}.webp`,ru:["Заезд на трассе", "Зрители фестиваля", "Болельщики у трассы", "Пилоты перед стартом", "Автомобили после заезда"][i],en:"Yuka Gymkhana 2026"}));
 const heroFiles = ["DSC06432", "Yuka-91", "DSC06604", "Yuka-183", "Yuka-221", "Yuka-2333333", "ivanov-056", "BRM04865", "BRM05332"];
 export function HeroPhotos({enabled}:{enabled:boolean}) {
   const [index,setIndex]=useState(0);
   const host=useRef<HTMLDivElement>(null);
+  const [requested,setRequested]=useState<Set<number>>(()=>new Set([0]));
+  useEffect(()=>{
+    if (!enabled || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    setRequested(previous=>new Set([...previous,(index+1)%heroFiles.length]));
+  },[enabled,index]);
   useEffect(()=>{
     if(!enabled)return;
     const mq=matchMedia("(prefers-reduced-motion: reduce)");
-    let raf=0,last=0,elapsed=0;
+    let raf=0,last=0,elapsed=0,current=0;
     const tick=(now:number)=>{
-      if(last && !document.hidden && !mq.matches){elapsed+=Math.min(now-last,80);if(elapsed>=4500){elapsed%=4500;setIndex(i=>(i+1)%heroFiles.length);}}
+      if(last && !document.hidden && !mq.matches){elapsed+=Math.min(now-last,80);if(elapsed>=4500){{
+        const next=(current+1)%heroFiles.length;
+        const image=host.current?.querySelector<HTMLImageElement>(`[data-frame="${next}"]`);
+        if(image?.complete && image.naturalWidth){
+          elapsed%=4500;
+          current=next;
+          setIndex(next);
+        }
+      }}}
       last=now;
-      host.current?.closest<HTMLElement>('.g-hero')?.style.setProperty('--hero-progress',mq.matches?'0':String(elapsed/4500));
+      host.current?.closest<HTMLElement>('.g-hero')?.style.setProperty('--hero-progress',mq.matches?'0':String(Math.min(elapsed/4500,1)));
       raf=requestAnimationFrame(tick);
     };
     raf=requestAnimationFrame(tick);return()=>cancelAnimationFrame(raf);
   },[enabled]);
-  return <div ref={host} className={`g-hero-slider g-hero-autoplay ${enabled?'is-running':''}`} aria-hidden="true">{heroFiles.map((file,i)=><img key={file} src={`/assets/gymkhana/hero/${file}.jpg`} alt="" className={i===index?"is-active":""} fetchPriority={i===0?"high":"auto"} draggable={false}/>)}</div>;
+  return <div ref={host} className={`g-hero-slider g-hero-autoplay ${enabled?'is-running':''}`} aria-hidden="true">{heroFiles.map((file,i)=><img key={file} data-frame={i} src={requested.has(i)?`/assets/gymkhana/hero/${file}.webp`:undefined} srcSet={requested.has(i)?`/assets/gymkhana/hero/${file}-mobile.webp 900w, /assets/gymkhana/hero/${file}.webp 1920w`:undefined} sizes="100vw" decoding="async" alt="" className={i===index?"is-active":""} fetchPriority={i===0?"high":"low"} draggable={false}/>)}</div>;
 }
 export function PhotoGrid() {
   const [viewer, setViewer] = useState<{

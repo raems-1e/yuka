@@ -114,8 +114,8 @@ export function PartnerLogo({
   if (name === "yka")
     return (
       <span className="compound-logo yka-logo" role="img" aria-label={label}>
-        <img src={asset("partner-imgGroup2")} alt="" />
-        <img src={asset("partner-imgGroup4")} alt="" />
+        <img loading="lazy" decoding="async" src={asset("partner-imgGroup2")} alt="" />
+        <img loading="lazy" decoding="async" src={asset("partner-imgGroup4")} alt="" />
       </span>
     );
   if (name === "combined")
@@ -125,15 +125,15 @@ export function PartnerLogo({
         role="img"
         aria-label={label}
       >
-        <img src={asset("partner-imgGroup7")} alt="" />
-        <img src={asset("partner-imgGroup6")} alt="" />
+        <img loading="lazy" decoding="async" src={asset("partner-imgGroup7")} alt="" />
+        <img loading="lazy" decoding="async" src={asset("partner-imgGroup6")} alt="" />
       </span>
     );
   if (name === "nwb")
     return (
       <span className="compound-logo nwb" role="img" aria-label={label}>
         {["imgVector", "imgVector1", "imgVector2", "imgGroup1"].map((p, i) => (
-          <img
+          <img loading="lazy" decoding="async"
             key={p}
             src={asset(`partner-${p}`)}
             alt=""
@@ -148,9 +148,9 @@ export function PartnerLogo({
   if (name === "vk")
     return (
       <span className="compound-logo vk-logo" role="img" aria-label={label}>
-        <img src={asset("partner-imgBg")} alt="" />
-        <img src={asset("partner-imgIntersect")} alt="" />
-        <img src={asset("partner-imgTypeZone")} alt="" />
+        <img loading="lazy" decoding="async" src={asset("partner-imgBg")} alt="" />
+        <img loading="lazy" decoding="async" src={asset("partner-imgIntersect")} alt="" />
+        <img loading="lazy" decoding="async" src={asset("partner-imgTypeZone")} alt="" />
       </span>
     );
   return (
@@ -272,7 +272,7 @@ export function ContentSections({
                       >
                         {["img", "imgGroup", "imgVector", "imgGroup1"].map(
                           (p, j) => (
-                            <img
+                            <img loading="lazy" decoding="async"
                               key={p}
                               alt=""
                               src={asset(`org-${p}`)}
@@ -287,7 +287,7 @@ export function ContentSections({
                         )}
                       </span>
                     ) : (
-                      <img
+                      <img loading="lazy" decoding="async"
                         alt=""
                         src={asset(
                           `org-${["imgLayer1", "imgDriftThat", "", "imgLayer1Copy5"][i]}`,
@@ -298,11 +298,11 @@ export function ContentSections({
                 ))}
               </div>
               <button className="slanted red projects-action" onClick={notify}>
-                <img className="edge left" src="/assets/red-left.svg" alt="" />
+                <img loading="lazy" decoding="async" className="edge left" src="/assets/red-left.svg" alt="" />
                 <span className="slanted-center">
                   <RollingLabel>{w.projects}</RollingLabel>
                 </span>
-                <img
+                <img loading="lazy" decoding="async"
                   className="edge right"
                   src="/assets/red-right.svg"
                   alt=""

@@ -12,27 +12,27 @@ export const mediaContent: Record<Region, Content> = {
   ru: {
     photos: [
       {
-        file: "795-9453-4.png",
+        file: "795-9453-4.webp",
         ru: "Пилот в красном комбинезоне между автомобилями",
         en: "Driver in a red racing suit between cars",
       },
       {
-        file: "795-9453-3.png",
+        file: "795-9453-3.webp",
         ru: "Сцена Yuka Drive Fest с вечерней подсветкой",
         en: "Yuka Drive Fest stage illuminated at night",
       },
       {
-        file: "795-9453-2.png",
+        file: "795-9453-2.webp",
         ru: "Белый автомобиль на ночной трассе",
         en: "White car on the night circuit",
       },
       {
-        file: "795-9453-1.png",
+        file: "795-9453-1.webp",
         ru: "Гоночный автомобиль на мероприятии Yuka",
         en: "Race car at a Yuka event",
       },
       {
-        file: "795-9453-0.png",
+        file: "795-9453-0.webp",
         ru: "Фотография российского мероприятия из макета Yuka",
         en: "Russian event photograph from the Yuka design",
       },

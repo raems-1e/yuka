@@ -15,7 +15,7 @@ function Picture({
   return (
     <picture className={className}>
       <source media="(max-width: 640px)" srcSet={asset(mobile)} />
-      <img src={asset(name)} alt={alt} />
+      <img loading="lazy" decoding="async" src={asset(name)} alt={alt} />
     </picture>
   );
 }
@@ -63,14 +63,14 @@ function Ticket({
         <span className="yc-tag">{ru ? "ПРОЙДЕН" : "COMPLETED"}</span>
       )}
       <button className="yc-result" onClick={notify}>
-        <img className="yc-eye-normal" src={asset("eye.svg")} alt="" />
-        <img className="yc-eye-hover" src={asset("eye-hover.svg")} alt="" />
+        <img loading="lazy" decoding="async" className="yc-eye-normal" src={asset("eye.svg")} alt="" />
+        <img loading="lazy" decoding="async" className="yc-eye-hover" src={asset("eye-hover.svg")} alt="" />
         <span>{ru ? "Результаты" : "Results"}</span>
       </button>
       <div className="yc-map" aria-hidden="true">
         <div className="yc-map-desktop">
           {["h", "v"].map((axis) => (
-            <img
+            <img loading="lazy" decoding="async"
               key={`hover${axis}`}
               className="yc-grid yc-grid-hover"
               src={asset(`map-hover-grid-${axis}.svg`)}
@@ -78,26 +78,26 @@ function Ticket({
             />
           ))}
           {["h", "v"].map((axis) => (
-            <img
+            <img loading="lazy" decoding="async"
               key={axis}
               className="yc-grid yc-grid-normal"
               src={asset(`map-grid-${axis}.svg`)}
               alt=""
             />
           ))}
-          <img
+          <img loading="lazy" decoding="async"
             className="yc-path yc-path-normal"
             src={asset("map-path.svg")}
             alt=""
           />
-          <img
+          <img loading="lazy" decoding="async"
             className="yc-path yc-path-hover"
             src={asset("map-hover-path.svg")}
             alt=""
           />
         </div>
         <div className="yc-map-mobile">
-          <img src={asset("map-mobile.svg")} alt="" />
+          <img loading="lazy" decoding="async" src={asset("map-mobile.svg")} alt="" />
         </div>
       </div>
       <div className="yc-details">
@@ -166,12 +166,12 @@ export function Calendar({
           >
             <span className="yc-tab-text">YUKA GYMKHANA {m.toUpperCase()}</span>
             <span className="yc-tab-logo" aria-hidden="true">
-              <img
+              <img loading="lazy" decoding="async"
                 className="yc-tab-inactive-logo"
                 src={asset(`tab-${m}.svg`)}
                 alt=""
               />
-              <img
+              <img loading="lazy" decoding="async"
                 className="yc-tab-active-logo"
                 src={asset(`tab-${m}-active.svg`)}
                 alt=""

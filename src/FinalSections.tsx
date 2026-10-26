@@ -87,7 +87,7 @@ export function FinalSections({
           {region === "ru" && (
             <img
               className="cooperation-photo"
-              src={a("final0-imgAb27Ccdc9C1Ab54D607D97Cc007Faea.png")}
+              src={a("final0-imgAb27Ccdc9C1Ab54D607D97Cc007Faea.webp")}
               alt=""
               loading="lazy"
             />
@@ -117,7 +117,7 @@ export function FinalSections({
           <div className="cooperation-cards">
             {c.titles.map((title, i) => (
               <button className="cooperation-card" key={i} onClick={notify}>
-                <img
+                <img loading="lazy" decoding="async"
                   className="cooperation-card-bg"
                   src={a("final0-imgRectangle37672283.svg")}
                   alt=""
@@ -127,7 +127,7 @@ export function FinalSections({
                     media="(max-width: 767px)"
                     srcSet={a("final2-imgGroup2087329578.svg")}
                   />
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={a(
                       i === 1
                         ? "final0-imgGroup2087329577.svg"
@@ -137,7 +137,7 @@ export function FinalSections({
                   />
                 </picture>
                 <span className="cooperation-card-copy">
-                  <img className="cooperation-icon" src={a(icons[i])} alt="" />
+                  <img loading="lazy" decoding="async" className="cooperation-icon" src={a(icons[i])} alt="" />
                   <span>{c.descriptions[i]}</span>
                 </span>
                 <h3>{title}</h3>
@@ -150,8 +150,8 @@ export function FinalSections({
         <div className="footer-top">
           <div className="footer-contact">
             <span className="footer-mail-icon">
-              <img src={a("final1-imgRectangle184.svg")} alt="" />
-              <img src={a("final1-imgEmailIcon.svg")} alt="" />
+              <img loading="lazy" decoding="async" src={a("final1-imgRectangle184.svg")} alt="" />
+              <img loading="lazy" decoding="async" src={a("final1-imgEmailIcon.svg")} alt="" />
             </span>
             <div>
               <p>{c.contact}</p>
@@ -159,23 +159,23 @@ export function FinalSections({
             </div>
           </div>
           <div className="footer-brand">
-            <img src={a("final1-imgYuka.svg")} alt="Yuka ADV Pro Racing" />
+            <img loading="lazy" decoding="async" src={a("final1-imgYuka.svg")} alt="Yuka ADV Pro Racing" />
             {region === "ru" ? (
               <div className="footer-socials">
                 {["Telegram", "VK", "Rutube", "Дзен"].map((label, i) => (
                   <button onClick={notify} aria-label={label} key={label}>
-                    <img
+                    <img loading="lazy" decoding="async"
                       className="footer-social-bg"
                       src={a("final1-imgRectangle185.svg")}
                       alt=""
                     />
                     {i === 2 ? (
                       <span className="footer-rutube">
-                        <img src={a("final1-imgGroup1.svg")} alt="" />
-                        <img src={a("final1-imgVector.svg")} alt="" />
+                        <img loading="lazy" decoding="async" src={a("final1-imgGroup1.svg")} alt="" />
+                        <img loading="lazy" decoding="async" src={a("final1-imgVector.svg")} alt="" />
                       </span>
                     ) : (
-                      <img
+                      <img loading="lazy" decoding="async"
                         className="footer-social-icon"
                         src={a(
                           [

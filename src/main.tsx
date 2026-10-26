@@ -83,10 +83,14 @@ function Hero({
         <img
           className={`poster ${posterLoaded ? "is-loaded" : ""}`}
           src={c.media.poster}
+          srcSet={`${c.media.poster.replace('.webp','-mobile.webp')} 900w, ${c.media.poster} 1920w`}
+          sizes="100vw"
+          fetchPriority="high"
+          decoding="async"
           alt=""
           onLoad={() => setPosterLoaded(true)}
         />
-        {c.media.video && !reduced && (
+        {c.media.video && posterLoaded && !reduced && (
           <BackgroundVideo
             url={c.media.video}
             paused={paused}

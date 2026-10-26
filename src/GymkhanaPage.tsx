@@ -53,7 +53,7 @@ function Reviews() {
 function TrackDiagram() {
   return (
     <figure className="g-track">
-      <img
+      <img loading="lazy" decoding="async"
         src="/assets/gymkhana/track.svg"
         alt="Схема зеркальной трассы джимханы со страницы Yuka Challenges"
       />
@@ -80,7 +80,7 @@ function EventVideo() {
       <div className="g-video-frame">
         {playing ? (
           <>
-            <img className="g-video-poster" src="/assets/poster-1.png" alt="" />
+            <img loading="lazy" decoding="async" className="g-video-poster" src="/assets/poster-1.webp" alt="" />
             <BackgroundVideo
               url="https://kinescope.io/grLisNDFxEj5w6A6CPw72w"
               paused={false}
@@ -94,7 +94,7 @@ function EventVideo() {
             onClick={() => setPlaying(true)}
             aria-label="Открыть видео Yuka"
           >
-            <img src="/assets/poster-1.png" alt="" />
+            <img loading="lazy" decoding="async" src="/assets/poster-1.webp" alt="" />
             <span>
               <Play fill="currentColor" />
               Смотреть видео
@@ -299,7 +299,7 @@ export function GymkhanaPage({
         </div>
       </section>
 
-      <section className="g-photo-break" aria-label="Джимхана в Санкт-Петербурге"><img src="/assets/sections/gym-2026-008.jpg" alt="Автомобиль на трассе джимханы" loading="lazy" /></section>
+      <section className="g-photo-break" aria-label="Джимхана в Санкт-Петербурге"><img src="/assets/sections/gym-2026-008.webp" alt="Автомобиль на трассе джимханы" loading="lazy" /></section>
       <section className="g-section g-bonuses">
         <div>
           <p className="g-kicker">Бонусы / Правила этапа</p>
@@ -371,7 +371,7 @@ export function GymkhanaPage({
       <EventVideo />
 
       <section className="g-section g-participate" id="g-participate">
-        <img className="g-driver-banner" src="/assets/gymkhana/driver.jpg" alt="Взгляд пилота в шлеме перед стартом" loading="lazy" />
+        <img className="g-driver-banner" src="/assets/gymkhana/driver.webp" alt="Взгляд пилота в шлеме перед стартом" loading="lazy" />
         <div>
           <p className="g-kicker">06 / Пилотам</p>
           <h2>
@@ -455,7 +455,7 @@ export function GymkhanaPage({
         <HorizontalRail label="Карточки пилотов" className="g-pilot-rail">{[0,1,2].map(example=>(
         <article className="g-pilot-profile" key={example}>
           <div className="g-pilot-red">
-            <img
+            <img loading="lazy" decoding="async"
               className="g-pilot-pattern"
               src="/assets/gymkhana/pilots/pattern.svg"
               alt=""
@@ -464,7 +464,7 @@ export function GymkhanaPage({
           <div className="g-pilot-info">
             <div className="g-pilot-top">
               <span className="g-pilot-number">
-                <img src="/assets/gymkhana/pilots/number.svg" alt="" />1
+                <img loading="lazy" decoding="async" src="/assets/gymkhana/pilots/number.svg" alt="" />1
               </span>
               <h3>
                 Корнеев
@@ -488,7 +488,7 @@ export function GymkhanaPage({
           </div>
           <img
             className="g-pilot-portrait"
-            src="/assets/gymkhana/pilots/korneev.png"
+            src="/assets/gymkhana/pilots/korneev.webp"
             alt="Влад Корнеев"
             loading="lazy"
           />

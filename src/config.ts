@@ -103,7 +103,7 @@ export const regions: Record<Region, RegionalConfig> = {
     series: true,
     menu: ["home", "seasons", "partnership", "press", "special", "faq"],
     media: {
-      poster: "/assets/poster-1.png",
+      poster: "/assets/poster-1.webp",
       video: "https://kinescope.io/grLisNDFxEj5w6A6CPw72w",
       position: "50% 50%",
       temporary: false,
@@ -115,7 +115,7 @@ export const regions: Record<Region, RegionalConfig> = {
     series: false,
     menu: ["home", "partnership", "press", "faq"],
     media: {
-      poster: "/assets/poster-1.png",
+      poster: "/assets/poster-1.webp",
       video: "https://kinescope.io/grLisNDFxEj5w6A6CPw72w",
       position: "50% 50%",
       temporary: true,

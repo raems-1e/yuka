@@ -85,12 +85,12 @@ export function MediaSections({
             }
           >
             <button className="album-card" onClick={notify}>
-              <img
+              <img loading="lazy" decoding="async"
                 className="album-grid"
                 src={asset("795-9453-6.svg")}
                 alt=""
               />
-              <img className="album-vk" src={asset("795-9453-5.svg")} alt="" />
+              <img loading="lazy" decoding="async" className="album-vk" src={asset("795-9453-5.svg")} alt="" />
               <span>{albums}</span>
               <ArrowUpRight className="album-arrow" size={20} />
             </button>
@@ -150,20 +150,20 @@ export function MediaSections({
                     className={`social-link social-${name.toLowerCase()}`}
                   >
                     {name === "Telegram" && (
-                      <img src={asset("795-9368-6.png")} alt="" />
+                      <img loading="lazy" decoding="async" src={asset("795-9368-6.png")} alt="" />
                     )}
                     {name === "VK" && (
-                      <img src={asset("795-9368-5.png")} alt="" />
+                      <img loading="lazy" decoding="async" src={asset("795-9368-5.png")} alt="" />
                     )}
                     {name === "Rutube" && (
                       <span className="rutube-icon">
-                        <img src={asset("795-9368-3.svg")} alt="" />
-                        <img src={asset("795-9368-4.svg")} alt="" />
+                        <img loading="lazy" decoding="async" src={asset("795-9368-3.svg")} alt="" />
+                        <img loading="lazy" decoding="async" src={asset("795-9368-4.svg")} alt="" />
                       </span>
                     )}
                     {name === "Дзен" && (
                       <span className="dzen-icon">
-                        <img src={asset("795-9368-0.svg")} alt="" />
+                        <img loading="lazy" decoding="async" src={asset("795-9368-0.svg")} alt="" />
                       </span>
                     )}
                   </button>

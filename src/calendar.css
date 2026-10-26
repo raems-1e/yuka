@@ -1,20 +1,20 @@
 @font-face {
   font-family: "Yuka Bounded";
-  src: url("/assets/Bounded.ttf") format("truetype");
+  src: url("/assets/Bounded.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Yuka Druk Text";
-  src: url("/assets/Druk.otf") format("opentype");
+  src: url("/assets/Druk.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Yuka Bounded";
-  src: url("/assets/Bounded-Regular.ttf") format("truetype");
+  src: url("/assets/Bounded-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
